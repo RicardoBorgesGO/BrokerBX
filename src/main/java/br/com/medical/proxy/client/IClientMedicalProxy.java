@@ -1,4 +1,4 @@
-package br.com.broker.proxy;
+package br.com.medical.proxy.client;
 
 import java.util.List;
 
