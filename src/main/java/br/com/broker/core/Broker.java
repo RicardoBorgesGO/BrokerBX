@@ -21,4 +21,12 @@ public class Broker implements IBroker {
 	public String getEndereco(String cep) {
 		return cepProxy.buscaEndereco(cep);
 	}
+
+	public String getMedicalTiposDeColaboradores() {
+		return serverMedicalProxy.getTipoDeColaboradores();
+	}
+
+	public String getMedicalPacientes() {
+		return serverMedicalProxy.getPacientes();
+	}
 }
