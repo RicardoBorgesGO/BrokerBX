@@ -4,8 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.inject.Inject;
-
+import br.com.broker.core.Broker;
 import br.com.broker.core.IBroker;
 import br.com.infra.commons.entity.Colaborador;
 import br.com.infra.commons.entity.Paciente;
@@ -21,8 +20,8 @@ public class ClientMedicalProxy implements IClientMedicalProxy, Serializable {
 	 */
 	private static final long serialVersionUID = 4201066883952092901L;
 	
-	@Inject
-	private IBroker broker;
+//	@Inject
+	private IBroker broker = new Broker();
 
 	public List<Colaborador> getColaboradores() {
 		return UtilMarshaller.marshallerAllJsonToObject(broker.getMedicalColaboradores(), new TypeToken<ArrayList<Colaborador>>() {}.getType());
