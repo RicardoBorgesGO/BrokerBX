@@ -18,4 +18,6 @@ public interface IClientMedicalProxy {
 	public List<Paciente> getPacientes();
 	
 	public boolean consultaUsuario(Usuario usuario);
+	
+	public Usuario consultaUsuarioPorLogin(String userName);
 }

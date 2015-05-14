@@ -1,4 +1,4 @@
-package br.com.broker.proxy;
+package br.com.broker.proxy.server;
 
 import br.com.infra.commons.entity.Colaborador;
 import br.com.infra.commons.entity.Usuario;
@@ -39,4 +39,11 @@ public interface IServerMedicalProxy {
 	 * @param usuario
 	 */
 	public String consultaUsuario(Usuario usuario);
+	
+	/**
+	 * Consulta usuario por login
+	 * @return
+	 */
+	public String consultaUsuarioPorLogin(String userName);
+	
 }

@@ -1,9 +1,9 @@
 package br.com.broker.core;
 
-import br.com.broker.proxy.IServerCepProxy;
-import br.com.broker.proxy.IServerMedicalProxy;
-import br.com.broker.proxy.impl.ServerCepProxy;
-import br.com.broker.proxy.impl.ServerMedicalProxy;
+import br.com.broker.proxy.server.IServerCepProxy;
+import br.com.broker.proxy.server.IServerMedicalProxy;
+import br.com.broker.proxy.server.impl.ServerCepProxy;
+import br.com.broker.proxy.server.impl.ServerMedicalProxy;
 import br.com.infra.commons.entity.Colaborador;
 import br.com.infra.commons.entity.Usuario;
 
@@ -36,5 +36,9 @@ public class Broker implements IBroker {
 
 	public String consultaUsuario(Usuario usuario) {
 		return serverMedicalProxy.consultaUsuario(usuario);
+	}
+
+	public String consultaUsuarioPorLogin(String userName) {
+		return serverMedicalProxy.consultaUsuarioPorLogin(userName);
 	}
 }

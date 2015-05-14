@@ -33,4 +33,6 @@ public interface IBroker {
 	public String getEndereco(String cep);
 	
 	public String consultaUsuario(Usuario usuario);
+	
+	public String consultaUsuarioPorLogin(String userName);
 }

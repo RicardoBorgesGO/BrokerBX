@@ -1,4 +1,4 @@
-package br.com.broker.proxy;
+package br.com.broker.proxy.server;
 
 public interface IServerCepProxy {
 

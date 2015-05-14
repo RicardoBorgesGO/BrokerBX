@@ -1,6 +1,6 @@
-package br.com.broker.proxy.impl;
+package br.com.broker.proxy.server.impl;
 
-import br.com.broker.proxy.IServerCepProxy;
+import br.com.broker.proxy.server.IServerCepProxy;
 
 public class ServerCepProxy implements IServerCepProxy {
 
