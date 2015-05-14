@@ -1,5 +1,8 @@
 package br.com.broker.core;
 
+import br.com.infra.commons.entity.Colaborador;
+import br.com.infra.commons.entity.Usuario;
+
 
 public interface IBroker {
 	
@@ -21,5 +24,13 @@ public interface IBroker {
 	 */
 	public String getMedicalPacientes();
 	
+	/**
+	 * Salvar colaborador
+	 * @param colaborador
+	 */
+	public void salvarColaborador(Colaborador colaborador);
+	
 	public String getEndereco(String cep);
+	
+	public String consultaUsuario(Usuario usuario);
 }

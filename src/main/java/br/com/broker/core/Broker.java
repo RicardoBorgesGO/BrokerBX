@@ -2,16 +2,16 @@ package br.com.broker.core;
 
 import br.com.broker.proxy.IServerCepProxy;
 import br.com.broker.proxy.IServerMedicalProxy;
-import br.com.broker.proxy.ServerCepProxy;
-import br.com.broker.proxy.ServerMedicalProxy;
+import br.com.broker.proxy.impl.ServerCepProxy;
+import br.com.broker.proxy.impl.ServerMedicalProxy;
+import br.com.infra.commons.entity.Colaborador;
+import br.com.infra.commons.entity.Usuario;
 
 public class Broker implements IBroker {
 
 	//Declaração dos serviores disponíveis
-//	@Inject
 	private IServerMedicalProxy serverMedicalProxy = new ServerMedicalProxy();
 	
-//	@Inject
 	private IServerCepProxy cepProxy = new ServerCepProxy();
 	
 	public String getMedicalColaboradores() {
@@ -28,5 +28,13 @@ public class Broker implements IBroker {
 
 	public String getMedicalPacientes() {
 		return serverMedicalProxy.getPacientes();
+	}
+
+	public void salvarColaborador(Colaborador colaborador) {
+		serverMedicalProxy.salvarColaborador(colaborador);
+	}
+
+	public String consultaUsuario(Usuario usuario) {
+		return serverMedicalProxy.consultaUsuario(usuario);
 	}
 }

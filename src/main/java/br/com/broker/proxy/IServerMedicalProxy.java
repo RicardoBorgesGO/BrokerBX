@@ -1,5 +1,8 @@
 package br.com.broker.proxy;
 
+import br.com.infra.commons.entity.Colaborador;
+import br.com.infra.commons.entity.Usuario;
+
 public interface IServerMedicalProxy {
 
 	/**
@@ -24,4 +27,16 @@ public interface IServerMedicalProxy {
 	 * @return JSON
 	 */
 	public String getPacientes();
+	
+	/**
+	 * Salva colaborador
+	 * @param colaborador
+	 */
+	public void salvarColaborador(Colaborador colaborador);
+	
+	/**
+	 * Consulta usuario
+	 * @param usuario
+	 */
+	public String consultaUsuario(Usuario usuario);
 }
