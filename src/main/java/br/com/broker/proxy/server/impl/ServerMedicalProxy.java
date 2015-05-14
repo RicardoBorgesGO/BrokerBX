@@ -41,11 +41,11 @@ public class ServerMedicalProxy implements IServerMedicalProxy, Serializable {
 	}
 
 	public String consultaUsuarioPorLogin(String userName) {
-		return UtilJson.getObjectJson(URL_SERVICE + "/rest/usuario/" + userName);
+		return UtilJson.getObjectJson(URL_SERVICE + "/rest/usuario/userName/" + userName);
 	}
 
 	public String consultaUsuarioPorId(Integer id) {
-		return UtilJson.getObjectJson(URL_SERVICE + "/rest/usuario/" + id);
+		return UtilJson.getObjectJson(URL_SERVICE + "/rest/usuario/id/" + id);
 	}
 
 }
