@@ -48,5 +48,9 @@ public class ClientMedicalProxy implements IClientMedicalProxy, Serializable {
 	public Usuario consultaUsuarioPorLogin(String userName) {
 		return UtilConverter.jsonToObject(broker.consultaUsuarioPorLogin(userName), Usuario.class);
 	}
+
+	public Usuario consultaUsuarioPorId(Integer id) {
+		return UtilConverter.jsonToObject(broker.consultaUsuarioPorId(id), Usuario.class);
+	}
 	
 }

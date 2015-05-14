@@ -46,4 +46,11 @@ public interface IServerMedicalProxy {
 	 */
 	public String consultaUsuarioPorLogin(String userName);
 	
+	/**
+	 * Consulta usuario por id
+	 * @param id
+	 * @return
+	 */
+	public String consultaUsuarioPorId(Integer id);
+	
 }

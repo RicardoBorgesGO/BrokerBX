@@ -3,36 +3,63 @@ package br.com.broker.core;
 import br.com.infra.commons.entity.Colaborador;
 import br.com.infra.commons.entity.Usuario;
 
-
+/**
+ * Classe corretora, que conhece todos os servidores de servicos disponiveis
+ * para atender um cliente
+ * @author Ricardo
+ *
+ */
 public interface IBroker {
 	
 	/**
 	 * Retorna os colaboradores em JSON
 	 * @return
 	 */
-	public String getMedicalColaboradores();
+	String getMedicalColaboradores();
 	
 	/**
 	 * Retorna os tipos de colaboradores em JSON
 	 * @return
 	 */
-	public String getMedicalTiposDeColaboradores();
+	String getMedicalTiposDeColaboradores();
 	
 	/**
 	 * Retorna os pacientes em JSON
 	 * @return JSON
 	 */
-	public String getMedicalPacientes();
+	String getMedicalPacientes();
 	
 	/**
 	 * Salvar colaborador
 	 * @param colaborador
 	 */
-	public void salvarColaborador(Colaborador colaborador);
+	void salvarColaborador(Colaborador colaborador);
 	
-	public String getEndereco(String cep);
+	/**
+	 * Consulta endereco pelo CEP
+	 * @param cep
+	 * @return
+	 */
+	String getEndereco(String cep);
 	
-	public String consultaUsuario(Usuario usuario);
+	/**
+	 * Consulta usuario
+	 * @param usuario
+	 * @return
+	 */
+	String consultaUsuario(Usuario usuario);
 	
-	public String consultaUsuarioPorLogin(String userName);
+	/**
+	 * Consulta usuario pelo login
+	 * @param userName
+	 * @return
+	 */
+	String consultaUsuarioPorLogin(String userName);
+	
+	/**
+	 * Consulta usuario por id
+	 * @param id
+	 * @return
+	 */
+	String consultaUsuarioPorId(Integer id);
 }

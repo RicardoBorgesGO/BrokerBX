@@ -44,4 +44,8 @@ public class ServerMedicalProxy implements IServerMedicalProxy, Serializable {
 		return UtilJson.getObjectJson(URL_SERVICE + "/rest/usuario/" + userName);
 	}
 
+	public String consultaUsuarioPorId(Integer id) {
+		return UtilJson.getObjectJson(URL_SERVICE + "/rest/usuario/" + id);
+	}
+
 }

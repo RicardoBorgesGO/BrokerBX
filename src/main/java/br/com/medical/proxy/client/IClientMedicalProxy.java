@@ -9,15 +9,48 @@ import br.com.infra.commons.entity.Usuario;
 
 public interface IClientMedicalProxy {
 
-	public List<Colaborador> getColaboradores();
+	/**
+	 * Busca Colaboradores
+	 * @return
+	 */
+	List<Colaborador> getColaboradores();
 	
-	public void salvarColaborador(Colaborador colaborador);
+	/**
+	 * Persiste colaborador
+	 * @param colaborador
+	 */
+	void salvarColaborador(Colaborador colaborador);
 	
-	public List<TipoDeColaborador> getTiposDeColaboradores();
+	/**
+	 * Busca tipos de colaboradores
+	 * @return
+	 */
+	List<TipoDeColaborador> getTiposDeColaboradores();
 	
-	public List<Paciente> getPacientes();
+	/**
+	 * Busca pacientes
+	 * @return
+	 */
+	List<Paciente> getPacientes();
 	
-	public boolean consultaUsuario(Usuario usuario);
+	/**
+	 * verifica se usuario existe
+	 * @param usuario
+	 * @return
+	 */
+	boolean consultaUsuario(Usuario usuario);
 	
-	public Usuario consultaUsuarioPorLogin(String userName);
+	/**
+	 * Consulta usuario pelo login
+	 * @param userName
+	 * @return
+	 */
+	Usuario consultaUsuarioPorLogin(String userName);
+	
+	/**
+	 * Consulta usuario pelo id
+	 * @param id
+	 * @return
+	 */
+	Usuario consultaUsuarioPorId(Integer id);
 }

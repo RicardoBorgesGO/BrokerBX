@@ -41,4 +41,8 @@ public class Broker implements IBroker {
 	public String consultaUsuarioPorLogin(String userName) {
 		return serverMedicalProxy.consultaUsuarioPorLogin(userName);
 	}
+
+	public String consultaUsuarioPorId(Integer id) {
+		return serverMedicalProxy.consultaUsuarioPorId(id);
+	}
 }
