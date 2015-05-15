@@ -1,5 +1,7 @@
 package br.com.broker.core;
 
+import java.io.Serializable;
+
 import br.com.broker.proxy.server.IServerCepProxy;
 import br.com.broker.proxy.server.IServerMedicalProxy;
 import br.com.broker.proxy.server.impl.ServerCepProxy;
@@ -7,7 +9,12 @@ import br.com.broker.proxy.server.impl.ServerMedicalProxy;
 import br.com.infra.commons.entity.Colaborador;
 import br.com.infra.commons.entity.Usuario;
 
-public class Broker implements IBroker {
+public class Broker implements IBroker, Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7213258197867467085L;
 
 	//Declaração dos serviores disponíveis
 	private IServerMedicalProxy serverMedicalProxy = new ServerMedicalProxy();
@@ -44,5 +51,9 @@ public class Broker implements IBroker {
 
 	public String consultaUsuarioPorId(Integer id) {
 		return serverMedicalProxy.consultaUsuarioPorId(id);
+	}
+
+	public void setTenant(String tenant) {
+		serverMedicalProxy.setTenant(tenant);
 	}
 }

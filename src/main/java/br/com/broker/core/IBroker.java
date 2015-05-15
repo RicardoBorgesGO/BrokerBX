@@ -62,4 +62,10 @@ public interface IBroker {
 	 * @return
 	 */
 	String consultaUsuarioPorId(Integer id);
+	
+	/**
+	 * Altera o tenant atual
+	 * @param tenant
+	 */
+	void setTenant(String tenant);
 }

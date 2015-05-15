@@ -53,4 +53,10 @@ public interface IServerMedicalProxy {
 	 */
 	public String consultaUsuarioPorId(Integer id);
 	
+	/**
+	 * Altera o tenant atual
+	 * @param tenant
+	 */
+	public void setTenant(String tenant);
+	
 }

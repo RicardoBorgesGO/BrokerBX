@@ -48,4 +48,10 @@ public class ServerMedicalProxy implements IServerMedicalProxy, Serializable {
 		return UtilJson.getObjectJson(URL_SERVICE + "/rest/usuario/id/" + id);
 	}
 
+	public void setTenant(String tenant) {
+		tenant = UtilConverter.objectToJson(tenant);
+		
+		UtilJson.postJson(URL_SERVICE + "/rest/tenant/setTenant", tenant);
+	}
+
 }
