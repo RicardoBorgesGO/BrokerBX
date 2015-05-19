@@ -1,6 +1,6 @@
 package br.com.broker.proxy.server;
 
-public interface IServerCepProxy {
+public interface IServerAddressProxy {
 
 	String SERVER_URL = "http://viacep.com.br/ws/";
 	

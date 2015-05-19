@@ -2,9 +2,9 @@ package br.com.broker.core;
 
 import java.io.Serializable;
 
-import br.com.broker.proxy.server.IServerCepProxy;
+import br.com.broker.proxy.server.IServerAddressProxy;
 import br.com.broker.proxy.server.IServerMedicalProxy;
-import br.com.broker.proxy.server.impl.ServerCepProxy;
+import br.com.broker.proxy.server.impl.ServerAddressProxy;
 import br.com.broker.proxy.server.impl.ServerMedicalProxy;
 import br.com.infra.commons.entity.Colaborador;
 import br.com.infra.commons.entity.Usuario;
@@ -19,7 +19,7 @@ public class Broker implements IBroker, Serializable {
 	//Declaração dos serviores disponíveis
 	private IServerMedicalProxy serverMedicalProxy = new ServerMedicalProxy();
 	
-	private IServerCepProxy cepProxy = new ServerCepProxy();
+	private IServerAddressProxy cepProxy = new ServerAddressProxy();
 	
 	public String getMedicalColaboradores() {
 		return serverMedicalProxy.getColaboradores();

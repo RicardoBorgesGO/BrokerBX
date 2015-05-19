@@ -2,9 +2,9 @@ package br.com.broker.proxy.server.impl;
 
 import java.io.Serializable;
 
-import br.com.broker.proxy.server.IServerCepProxy;
+import br.com.broker.proxy.server.IServerAddressProxy;
 
-public class ServerCepProxy implements IServerCepProxy, Serializable {
+public class ServerAddressProxy implements IServerAddressProxy, Serializable {
 
 
 	/**
